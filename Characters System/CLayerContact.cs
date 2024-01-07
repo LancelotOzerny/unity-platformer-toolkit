@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CLayerCheck : MonoBehaviour
+public class CLayerContact : MonoBehaviour
 {
     [Header("Layer Check Params")]
     [SerializeField] private LayerMask layer;
