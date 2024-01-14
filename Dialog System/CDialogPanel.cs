@@ -20,7 +20,6 @@ public class CDialogPanel : MonoBehaviour
     private void Start()
     {
         Close();
-        Display();
     }
 
     /// <summary>
@@ -42,14 +41,12 @@ public class CDialogPanel : MonoBehaviour
     {
         messages.gameObject.SetActive(false);
         touch.gameObject.SetActive(false);
+        this.dialog = null;
     }
 
-    public void Display()
+    public void Display(CDialog dialog)
     {
-        if (dialog == null)
-        {
-            return;
-        }
+        this.dialog = dialog;
 
         foreach (GameObject obj in messageObjects)
         {
